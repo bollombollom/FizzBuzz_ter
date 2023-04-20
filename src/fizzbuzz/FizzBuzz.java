@@ -2,11 +2,15 @@ package fizzbuzz;
 
 public class FizzBuzz {
 
-	private static final String FIZZ = "fizz";
+	private static final int[] numSpeciaux = { 3, 5 };
+	private static final String[] traduction = { "fizz", "buzz" };
 
 	public String fizzBuzz(int numero) {
-		if (numero == 3)
-			return FIZZ;
+		for (int i = 0; i < numSpeciaux.length; i++) {
+			if (numero == numSpeciaux[i]) {
+				return traduction[i];
+			}
+		}
 		return Integer.toString(numero);
 	}
 
